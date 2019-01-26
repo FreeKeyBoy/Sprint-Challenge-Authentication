@@ -29,18 +29,29 @@ Implement an User Authentication System in order to access the jokes from the Jo
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. What is the purpose of using _sessions_?
+
+Sessions give the ability to have the login info be statefull, so we don't have to log in every time the app refreshes, or changes are added. 
+
 1. What does bcrypt do to help us store passwords in a secure manner.
+
+Bcrypt hashes plain text passwords so that if they are discovered, they can not be used.
+
 1. What does bcrypt do to slow down attackers?
+
+Bcrypt allows us to set how many rounds the password will be hashed, setting the dificulty in decrypting them.
+
 1. What are the three parts of the JSON Web Token?
+
+The header, the payload, and signature.
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add PM as collaborator on Github.
+- [X] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [ ] Implement the project on this Branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
