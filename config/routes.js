@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const db = require('../database/dbConfig.js')
 const jwt = require('jsonwebtoken');
 
-const secret = require('../_secrets/keys').jwtKey;
+const secret = process.env.JWT_SECRET;
 const { authenticate } = require('../auth/authenticate');
 
 module.exports = server => {
@@ -15,11 +15,11 @@ module.exports = server => {
 
 function generateToken(user) {
   const payload = {
-      subject: user.id,
+      // subject: user.id,
       username: user.username
   };
 
-  const secret = "Q948573-4958EPOIRJG;LSKFGJQ948TU49387OIJ;LJT9J4";
+  // const secret = "Q948573-4958EPOIRJG;LSKFGJQ948TU49387OIJ;LJT9J4";
   const options = {
       expiresIn: '1h',
   }
